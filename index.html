@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <link rel="shortcut icon" href="./img/FPT_Polytechnic.png" type="image/png" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>FPT Folytechnic</title>
+      <link rel="stylesheet" href="./css/form.css" />
+      <link rel="stylesheet" href="css/dist/master.css" />
+
+      <link
+         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet"
+      />
+   </head>
+   <body>
+      <div class="container-form">
+         <img src="/images/FPT_Polytechnic.png" alt="" class="logo" />
+         <img src="./images/back/pic-2.webp" alt="" class="background" />
+
+         <form onsubmit="return false" class="form" id="form">
+            <div class="title">Điền thông tin để tiếp tục chơi</div>
+            <span id="message"></span>
+            <div id="loading" class="hidden">Vui lòng đợi trong giây lát...</div>
+
+            <input
+               type="text"
+               required
+               placeholder="Họ tên"
+               name="fullName"
+               id="fullName"
+               class="input"
+            />
+            <input type="number" required placeholder="Tuổi" name="age" class="input" id="age" />
+            <input
+               required
+               type="number"
+               placeholder="Số điện thoại"
+               name="phone"
+               class="input"
+               id="phone"
+            />
+            <!-- <a href="/game.html">Chơi ngay</a> -->
+            <button id="submit" class="button-confirm">Let`s go →</button>
+         </form>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="./js/form.js"></script>
+   </body>
+</html>
