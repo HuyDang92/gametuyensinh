@@ -18,7 +18,7 @@ const submitUser = () => {
    document.getElementById("loading").style.display = "block";
 
    axios
-      .post("https://gamepoly.onrender.com/api/v1/users/create", postData)
+      .post("https://warriorcode.online/api/users", postData)
       .then(function (response) {
          // Xử lý dữ liệu từ phản hồi
          const data = response.data;
