@@ -32,17 +32,20 @@
          </div>
          <div class="heropick hero">
             <div class="title">
-               Hero Family <img src="images/watermelon.png" /><span class="total"></span>
+               <!-- <img src="images/watermelon.png" /> -->
+               Hero Family <span class="total"></span>
             </div>
             <div class="heros">
                <!-- row -->
                <div class="wrapper" data-src="1">
                   <div class="hero1 hero-c">
-                     <div class="ba left"></div>
+                     <img src="/images/hero1.png" alt="" />
+
+                     <!-- <div class="ba left"></div>
                      <div class="ba right"></div>
                      <div class="mouse"></div>
                      <div class="foot left"></div>
-                     <div class="foot right"></div>
+                     <div class="foot right"></div> -->
                   </div>
                </div>
                <div class="wrapper" data-src="11">
@@ -56,7 +59,7 @@
                   </div>
                </div>
                <!-- row -->
-               <div class="wrapper locked" data-src="2" data-price="100">
+               <div class="wrapper" data-src="2" data-price="100">
                   <div class="price">100 <img src="images/watermelon.png" /></div>
                   <div class="hero2 hero-c">
                      <div class="eye"></div>
@@ -69,7 +72,7 @@
                      <div class="foot right"></div>
                   </div>
                </div>
-               <div class="wrapper locked" data-src="3" data-price="300">
+               <div class="wrapper" data-src="3" data-price="300">
                   <div class="price">300 <img src="images/watermelon.png" /></div>
                   <div class="hero3 hero-c">
                      <div class="hat-up"></div>
@@ -81,7 +84,7 @@
                   </div>
                </div>
                <!-- row -->
-               <div class="wrapper locked" data-src="4" data-price="500">
+               <div class="wrapper" data-src="4" data-price="500">
                   <div class="price">500 <img src="images/watermelon.png" /></div>
                   <div class="hero4 hero-c">
                      <div class="hat"></div>
@@ -94,7 +97,7 @@
                      <div class="foot right"></div>
                   </div>
                </div>
-               <div class="wrapper locked" data-src="7" data-price="600">
+               <div class="wrapper" data-src="7" data-price="600">
                   <div class="price">600 <img src="images/watermelon.png" /></div>
                   <div class="hero7 hero-c">
                      <div class="hat hat1"></div>
@@ -107,7 +110,7 @@
                   </div>
                </div>
                <!-- row -->
-               <div class="wrapper locked" data-src="8" data-price="700">
+               <div class="wrapper" data-src="8" data-price="700">
                   <div class="price">700 <img src="images/watermelon.png" /></div>
                   <div class="hero8 hero-c">
                      <div class="hat"></div>
@@ -118,7 +121,7 @@
                      <div class="foot right"></div>
                   </div>
                </div>
-               <div class="wrapper locked" data-src="12" data-price="800">
+               <div class="wrapper" data-src="12" data-price="800">
                   <div class="new">New</div>
                   <div class="price">800 <img src="images/watermelon.png" /></div>
                   <div class="hero12 hero-c">
@@ -147,7 +150,7 @@
                   </div>
                </div>
                <!-- row -->
-               <div class="wrapper locked" data-src="9" data-price="900">
+               <div class="wrapper" data-src="9" data-price="900">
                   <div class="new">New</div>
                   <div class="price">900 <img src="images/watermelon.png" /></div>
                   <div class="hero9 hero-c">
@@ -165,7 +168,7 @@
                      </div>
                   </div>
                </div>
-               <div class="wrapper locked" data-src="10" data-price="1000">
+               <div class="wrapper" data-src="10" data-price="1000">
                   <div class="price">1000 <img src="images/watermelon.png" /></div>
                   <div class="hero10 hero-c">
                      <div class="leaf left"></div>
@@ -178,8 +181,7 @@
                      <div class="foot right"></div>
                   </div>
                </div>
-               <!-- row -->
-               <div
+               <!-- <div
                   class="wrapper combo locked"
                   data-src="13"
                   data-price="9999999"
@@ -214,7 +216,6 @@
                      </div>
                   </div>
                </div>
-               <!-- row -->
                <div class="wrapper combo locked" data-src="5" data-price="9999999">
                   <div class="price">Unlock via 5 times +1 combo</div>
                   <div class="hero5 hero-c">
@@ -226,41 +227,43 @@
                      <div class="foot left"></div>
                      <div class="foot right"></div>
                   </div>
-               </div>
+               </div> -->
             </div>
          </div>
          <div class="draw">
-            <div class="draw-title">
-               I fell lucky today
-               <span class="draw-left">Remain:<span class="draw-total">0</span></span>
-            </div>
+            <div class="draw-title">Vòng quay may mắn</div>
+            <span class="draw-left">Lượt quay:<span class="draw-total">0</span></span>
+
             <div class="drawer">
                <img class="draw-plate" width="200" src="images/draw.png" />
                <div class="draw-btn"></div>
             </div>
             <div class="draw-result">
-               <p>Congratulations！You win</p>
+               <p>Chức mừng bạn!</p>
                <p class="draw-prize"></p>
             </div>
-            <p class="draw-footer">Rule: You get 1 draw every 20 score you gain in the game.</p>
+            <p class="draw-footer">Chú ý: Bạn nhận được 1 lượt quay sau mỗi 20 điểm chơi game.</p>
          </div>
          <div class="game-over overlay">
-            <div class="title">Game Over!</div>
+            <div class="title">Thất bại!</div>
             <div class="board">
-               <p>Score</p>
+               <p>Điểm</p>
                <p class="score"></p>
-               <p>Best</p>
+               <p>Kỉ lục</p>
                <p class="best"></p>
+               <p>Lượt chơi <span class="turnPlay">0</span>/5</p>
             </div>
             <div class="actions">
                <div class="btn btn-playagain">Chơi lại</div>
                <div class="btn btn-home">Về trang chủ</div>
             </div>
          </div>
-         <div class="instruction">Hold your finger on the screen to stretch out the stick</div>
-         <div class="perfect">Perfect!!!</div>
+         <div class="outturn">Bạn đã hết lượt chơi</div>
+         <div class="instruction">Nhấn giữ ngón tay để kéo dài gậy!</div>
+         <div class="perfect">Tuyệt vời!!!</div>
          <div class="watermelon">
-            <span class="total"></span><img src="images/watermelon.png" />
+            <span class="total"></span>
+            <!-- <img src="images/watermelon.png" /> -->
          </div>
          <div class="live-score"></div>
          <div class="hero">

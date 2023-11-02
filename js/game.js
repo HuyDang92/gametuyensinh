@@ -1,4 +1,7 @@
 /* Zepto v1.1.6 - zepto event ajax form ie - zeptojs.com/license */
+const currentPlay = localStorage.getItem("currentPlay");
+let _currentPlay = Number(currentPlay);
+
 var Zepto = (function () {
    function L(t) {
       return null == t ? String(t) : j[S.call(t)] || "object";
@@ -1655,137 +1658,103 @@ $(function () {
                   (11 === b || 2 === b || 4 === b) && f.find(".hat").css({ width: d + 2 + "px" }),
                   1 === b && f.find(".mouse").css({ width: Math.floor(J[a][3] * m) + "px" }),
                   4 === b &&
-                     f
-                        .find(".body")
-                        .css({
-                           width: Math.floor(J[a][3] * m) + "px",
-                           height: Math.floor(J[a][4] * m) + "px",
-                           top: Math.floor(J[a][5] * m) + "px",
-                        }),
+                     f.find(".body").css({
+                        width: Math.floor(J[a][3] * m) + "px",
+                        height: Math.floor(J[a][4] * m) + "px",
+                        top: Math.floor(J[a][5] * m) + "px",
+                     }),
                   5 === b &&
-                     (f
-                        .find(".hair-up")
-                        .css({
-                           width: Math.floor(J[a][3] * m) + "px",
-                           height: Math.floor(J[a][5] * m) + "px",
-                        }),
-                     f
-                        .find(".hair-down")
-                        .css({
-                           width: Math.floor(J[a][4] * m) + "px",
-                           height: Math.floor(J[a][5] * m) + "px",
-                        }),
+                     (f.find(".hair-up").css({
+                        width: Math.floor(J[a][3] * m) + "px",
+                        height: Math.floor(J[a][5] * m) + "px",
+                     }),
+                     f.find(".hair-down").css({
+                        width: Math.floor(J[a][4] * m) + "px",
+                        height: Math.floor(J[a][5] * m) + "px",
+                     }),
                      f
                         .find(".ribbon")
                         .css({ "border-right-width": Math.floor(J[a][6] * m) + "px" })),
                   6 === b &&
-                     (f
-                        .find(".top")
-                        .css({
-                           width: Math.floor(J[a][3] * m) + "px",
-                           height: Math.floor(J[a][4] * m) + "px",
-                        }),
-                     f
-                        .find(".top-front")
-                        .css({
-                           width: Math.floor(J[a][5] * m) + "px",
-                           height: Math.floor(J[a][6] * m) + "px",
-                        })),
+                     (f.find(".top").css({
+                        width: Math.floor(J[a][3] * m) + "px",
+                        height: Math.floor(J[a][4] * m) + "px",
+                     }),
+                     f.find(".top-front").css({
+                        width: Math.floor(J[a][5] * m) + "px",
+                        height: Math.floor(J[a][6] * m) + "px",
+                     })),
                   7 === b &&
                      (f.find(".hat1").css({ left: Math.floor(J[a][3] * m) + "px" }),
                      f.find(".hat2").css({ left: Math.floor(J[a][4] * m) + "px" }),
                      f.find(".hat3").css({ left: Math.floor(J[a][5] * m) + "px" })),
                   9 === b &&
-                     (f
-                        .find(".body")
-                        .css({
-                           width: d + "px",
-                           height: e + "px",
-                           "border-radius": d + "px/" + e + "px",
-                        }),
-                     f
-                        .find(".head")
-                        .css({
-                           width: Math.floor(J[a][3] * m) + "px",
-                           height: Math.floor(J[a][4] * m) + "px",
-                           "border-radius":
-                              Math.floor(J[a][3] * m) + "px/" + Math.floor(J[a][4] * m) + "px",
-                        }),
-                     f
-                        .find(".heart")
-                        .css({
-                           width: Math.floor(J[a][5] * m) + "px",
-                           left: Math.ceil(J[a][6] * m) + "px",
-                        }),
-                     f
-                        .find(".hand")
-                        .css({
-                           width: Math.floor(J[a][7] * m) + "px",
-                           height: Math.floor(J[a][8] * m) + "px",
-                        })),
+                     (f.find(".body").css({
+                        width: d + "px",
+                        height: e + "px",
+                        "border-radius": d + "px/" + e + "px",
+                     }),
+                     f.find(".head").css({
+                        width: Math.floor(J[a][3] * m) + "px",
+                        height: Math.floor(J[a][4] * m) + "px",
+                        "border-radius":
+                           Math.floor(J[a][3] * m) + "px/" + Math.floor(J[a][4] * m) + "px",
+                     }),
+                     f.find(".heart").css({
+                        width: Math.floor(J[a][5] * m) + "px",
+                        left: Math.ceil(J[a][6] * m) + "px",
+                     }),
+                     f.find(".hand").css({
+                        width: Math.floor(J[a][7] * m) + "px",
+                        height: Math.floor(J[a][8] * m) + "px",
+                     })),
                   10 === b &&
-                     f
-                        .find(".mouse")
-                        .css({
-                           width: Math.floor(J[a][3] * m) + "px",
-                           height: Math.floor(J[a][4] * m) + "px",
-                           "border-radius":
-                              Math.floor(J[a][3] * m) + "px/" + Math.floor(J[a][4] * m) + "px",
-                        }),
+                     f.find(".mouse").css({
+                        width: Math.floor(J[a][3] * m) + "px",
+                        height: Math.floor(J[a][4] * m) + "px",
+                        "border-radius":
+                           Math.floor(J[a][3] * m) + "px/" + Math.floor(J[a][4] * m) + "px",
+                     }),
                   12 === b &&
                      (f.find(".body").css({ width: d + "px", height: e + "px" }),
-                     f
-                        .find(".inside")
-                        .css({
-                           width: Math.floor(J[a][3] * m) + "px",
-                           height: Math.floor(J[a][4] * m) + "px",
-                        }),
-                     f
-                        .find(".head")
-                        .css({
-                           width: Math.floor(J[a][5] * m) + "px",
-                           height: Math.floor(J[a][5] * m) + "px",
-                           top: -Math.floor(J[a][9] * m) + "px",
-                        }),
-                     f
-                        .find(".face")
-                        .css({
-                           width: Math.floor(J[a][6] * m) + "px",
-                           height: Math.floor(J[a][6] * m) + "px",
-                        }),
-                     f
-                        .find(".mouse")
-                        .css({
-                           width: Math.floor(J[a][7] * m) + "px",
-                           "border-radius":
-                              "0px 0px " +
-                              Math.floor(J[a][7] * m) +
-                              "px " +
-                              Math.floor(J[a][7] * m) +
-                              "px",
-                        }),
+                     f.find(".inside").css({
+                        width: Math.floor(J[a][3] * m) + "px",
+                        height: Math.floor(J[a][4] * m) + "px",
+                     }),
+                     f.find(".head").css({
+                        width: Math.floor(J[a][5] * m) + "px",
+                        height: Math.floor(J[a][5] * m) + "px",
+                        top: -Math.floor(J[a][9] * m) + "px",
+                     }),
+                     f.find(".face").css({
+                        width: Math.floor(J[a][6] * m) + "px",
+                        height: Math.floor(J[a][6] * m) + "px",
+                     }),
+                     f.find(".mouse").css({
+                        width: Math.floor(J[a][7] * m) + "px",
+                        "border-radius":
+                           "0px 0px " +
+                           Math.floor(J[a][7] * m) +
+                           "px " +
+                           Math.floor(J[a][7] * m) +
+                           "px",
+                     }),
                      f.find(".m").css({ width: Math.floor(J[a][8] * m) + "px" })),
                   13 === b &&
                      (f.find(".body").css({ width: d + "px", height: e + "px" }),
-                     f
-                        .find(".head")
-                        .css({
-                           width: Math.floor(J[a][3] * m) + "px",
-                           height: Math.floor(J[a][4] * m) + "px",
-                        }),
-                     f
-                        .find(".half")
-                        .css({
-                           width: Math.floor(J[a][5] * m) + "px",
-                           height: Math.floor(J[a][6] * m) + "px",
-                        }),
+                     f.find(".head").css({
+                        width: Math.floor(J[a][3] * m) + "px",
+                        height: Math.floor(J[a][4] * m) + "px",
+                     }),
+                     f.find(".half").css({
+                        width: Math.floor(J[a][5] * m) + "px",
+                        height: Math.floor(J[a][6] * m) + "px",
+                     }),
                      f.find(".mouse").css({ top: Math.floor(J[a][7] * m) + "px" }),
-                     f
-                        .find(".m")
-                        .css({
-                           width: Math.floor(J[a][8] * m) + "px",
-                           top: Math.floor(J[a][9] * m) + "px",
-                        }),
+                     f.find(".m").css({
+                        width: Math.floor(J[a][8] * m) + "px",
+                        top: Math.floor(J[a][9] * m) + "px",
+                     }),
                      f.find(".strip1, .strip2").css({ width: Math.floor(J[a][10] * m) + "px" }));
             }
             this.isNew || this.$newHeroIcon.show();
@@ -1819,6 +1788,10 @@ $(function () {
                a.nextAfterAnimation(a.$gametitle, K.PRE_BEGIN), a.$gametitle.addClass("hinge");
             }),
                $(".btn-playagain").on(I, function () {
+                  if (Number(_currentPlay) < 5) {
+                     _currentPlay++;
+                     localStorage.setItem("currentPlay", _currentPlay);
+                  }
                   a.reset(), a.next(K.PRE_BEGIN);
                }),
                $(".btn-home").on(I, function () {
@@ -1874,6 +1847,10 @@ $(function () {
             store("hero" + a, !0), $('.wrapper[data-src="' + a + '"]').removeClass("locked");
          }),
          (this.reset = function () {
+            if (Number(_currentPlay) >= 5) {
+               document.querySelector(".btn-play").style.display = "none";
+               document.querySelector(".outturn").style.display = "block";
+            }
             (this.score = 0),
                (this.count = 0),
                (this.isDrawing = !1),
@@ -2100,7 +2077,8 @@ $(function () {
                      width: this.BOX3.width + "px",
                      right: -this.BOX3.width + "px",
                   })),
-               this.$game.append(this.$box3),
+               (document.querySelector(".box").innerHTML = "FPT");
+            this.$game.append(this.$box3),
                setTimeout(function () {
                   a.$box3.css({
                      transform: "translate3d(" + -(k - a.BOX3.left) + "px, 0, 0)",
@@ -2158,6 +2136,11 @@ $(function () {
                this.$gameover.show(),
                this.$game.addClass("bounce"),
                this.$hero.css({ "transition-duration": "", "-webkit-transition-duration": "" });
+            document.querySelector(".turnPlay").innerHTML = _currentPlay;
+            if (_currentPlay == 5) {
+               document.querySelector(".actions").style.display = "none";
+               document.querySelector(".outturn").style.display = "block";
+            }
          }),
          (this.drawStart = function () {
             var a = this;
@@ -2170,12 +2153,10 @@ $(function () {
                   (this.isDrawing = !0),
                   this.updateDraw(-1),
                   this.$drawResult.removeClass("in"),
-                  this.$drawPlate
-                     .addClass("start")
-                     .css({
-                        "-webkit-transform": "rotate(" + c + "deg)",
-                        transform: "rotate(" + c + "deg)",
-                     });
+                  this.$drawPlate.addClass("start").css({
+                     "-webkit-transform": "rotate(" + c + "deg)",
+                     transform: "rotate(" + c + "deg)",
+                  });
             }
          }),
          (this.drawEnd = function (a) {
@@ -2183,18 +2164,16 @@ $(function () {
             var b = this.getPrize(a);
             this.$drawPrize.text(b),
                this.$drawResult.addClass("in"),
-               this.$drawPlate
-                  .removeClass("start")
-                  .css({
-                     "-webkit-transform": "rotate(" + -a + "deg)",
-                     transform: "rotate(" + -a + "deg)",
-                  });
+               this.$drawPlate.removeClass("start").css({
+                  "-webkit-transform": "rotate(" + -a + "deg)",
+                  transform: "rotate(" + -a + "deg)",
+               });
          }),
          (this.getPrize = function (a) {
             for (var b, c = 0; c < M.length; c++)
                if (M[c].from <= a && a < M[c].from + (360 * M[c].per) / 100)
                   return "number" == typeof M[c].prize
-                     ? (this.updateTotal(M[c].prize), (b = M[c].prize + " Watermelon!"))
+                     ? (this.updateTotal(M[c].prize), (b = M[c].prize + " Dưa hấu!"))
                      : (this.unlockHero(N), (b = "Super Hero！！"));
          }),
          (this.updateScore = function (a) {

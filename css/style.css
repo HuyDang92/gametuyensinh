@@ -27,3 +27,54 @@
 .game-title {
    text-align: center;
 }
+.heropick {
+   top: 25%;
+}
+.hero-c > img {
+   width: 2.5rem;
+}
+.draw.in {
+   padding: 1rem 2rem;
+}
+.draw-title,
+.title {
+   text-align: center;
+}
+.draw .draw-left {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 12px;
+   float: none;
+}
+.draw .draw-footer {
+   font-size: 15px;
+}
+
+.outturn {
+   display: none;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: #ffff;
+   cursor: pointer;
+   background: #000;
+   padding: 10px;
+   border-radius: 10px;
+   margin: 5px auto;
+   width: 200px;
+   text-align: center;
+}
+.heropick .heros {
+   height: fit-content;
+}
+.total {
+   display: none;
+}
+.btn-draw{
+   display: none;
+}
+.box {
+}
